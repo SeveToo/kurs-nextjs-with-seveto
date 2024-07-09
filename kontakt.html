@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/logo.png" alt="SeveTo Logos" />
+        <span>SeveTo</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="omnie.html">O mnie</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="listacelow.html">Lista celów</a></li>
+          <li><a class="CTA" href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main_contact">
+      <section class="discription_container">
+        <h1>Jeśli masz do mnie jakąś sprawę to śmiało pisz:</h1>
+        <ul class="contact">
+          <li><img src="./assets/discord.png" alt="discord" />.seveto</li>
+          <li>
+            <img src="./assets/email.png" alt="discord" />filipkepka01@gmail.com
+          </li>
+          <li><img src="./assets/call.png" alt="discord" />518 341 114</li>
+        </ul>
+      </section>
+
+      <section class="form_container">
+        <h2>Napisz do mnie</h2>
+        <form action="#" method="post">
+          <div>
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit">Wyślij</button>
+        </form>
+      </section>
+    </main>
+    <br /><br /><br /><br /><br /><br /><br />
+    <footer>
+      <p>
+        <span class="mark">SeveTo.</span>
+        Copyright &copy; <span id="year"></span>. Wszelkie prawa zastrzeżone.
+      </p>
+    </footer>
+
+    <script src="getyear.js"></script>
+  </body>
+</html>
