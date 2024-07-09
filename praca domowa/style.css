@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --main-color: #191919;
+  --text-color: #dddddd;
+  --second-color: #e43d40;
+  --df-margin: 16px;
+  --df-padding: 16px 40px;
+  --df-radius: 20px;
+  --df-border: 1px solid var(--second-color);
+  --df-box-shadow: 2px 2px 20px #1515157d;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--df-padding);
+  margin-bottom: var(--df-margin);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  gap: 20px;
+  font-size: 16px;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  color: rgb(227, 227, 227);
+}
+
+ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.active {
+  color: #e43d40;
+  font-weight: 700;
+}
+
+.CTA {
+  display: block;
+  background: #d14444;
+  padding: 8px 16px;
+  border-radius: var(--df-radius);
+  color: var(--text-color);
+}
+
+.CTA:hover {
+  background: var(--second-color);
+}
+
+.CTA:active {
+  display: block;
+  transform: scale(0.9);
+  transition: transform 0.1s;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--df-padding);
+  gap: 80px;
+}
+
+.discription_container {
+  max-width: calc(400px + 10vw);
+}
+
+.discription_container h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+  max-width: 400px;
+}
+
+.discription_container p {
+  line-height: 30px;
+}
+
+.about__img img {
+  width: calc(200px + 30vw);
+  border-radius: var(--df-radius);
+  box-shadow: 2px 2px 20px #191919;
+}
+
+.aka {
+  color: var(--second-color);
+  font-size: 16px;
+}
+
+.mark {
+  color: var(--second-color);
+  font-weight: 700;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact li {
+  display: flex;
+  gap: 12px;
+  transition: gap 0.2s;
+}
+
+.contact li:hover {
+  gap: 20px;
+  cursor: pointer;
+}
+
+.contact li img {
+  width: 40px;
+}
+
+footer {
+  padding: var(--df-padding);
+  text-align: center;
+  margin-top: var(--df-margin);
+}
+
+/* Style dla sekcji portfolio */
+.portfolio-section {
+  margin-bottom: 40px;
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: var(--df-radius);
+  box-shadow: var(--df-box-shadow);
+  width: 100vw;
+}
+
+.portfolio-section h2 {
+  margin-bottom: 16px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsywny grid */
+  gap: 20px;
+}
+
+.portfolio-item {
+  background-color: var(--main-color); /* Ciemniejsze tło dla projektów */
+  padding: 20px;
+  border-radius: var(--df-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+  transition: transform 0.3s ease; /* Płynne przejście transformacji */
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px); /* Efekt uniesienia przy najechaniu */
+}
+
+.portfolio-item a {
+  text-decoration: none; /* Usuń podkreślenie linku */
+  color: inherit; /* Dziedziczenie koloru tekstu */
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px; /* Ustalona wysokość miniaturki */
+  object-fit: cover;
+  border-radius: var(--df-radius);
+  margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.portfolio-item p {
+  font-size: 14px;
+}
+
+/* Style dla sekcji hobby */
+
+.description_container {
+  max-width: 700px;
+}
+.hobby-section {
+  display: flex;
+  background-color: #2a2a2a;
+  padding: var(--df-padding); /* Dodanie paddingu */
+  border-radius: var(--df-radius); /* Zaokrąglone rogi */
+  box-shadow: var(--df-box-shadow); /* Dodanie cienia */
+  gap: 10vw;
+  max-width: 1400px;
+}
+
+.hobby-section:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.hobby-section__description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hobby-section h2 {
+  color: var(--second-color); /* Kolor nagłówka sekcji */
+  margin-bottom: 16px;
+}
+
+.hobby-section img {
+  width: 500px;
+  max-width: 30vw;
+  object-fit: cover; /* Dopasowanie obrazka do kontenera */
+  border-radius: var(--df-radius); /* Zaokrąglone rogi */
+  margin-bottom: 16px;
+}
+
+/* Style dla strony "O mnie" */
+.about {
+  display: flex; /* Użyj Flexbox dla elastycznego układu */
+  flex-direction: column; /* Układ elementów w pionie */
+  gap: 40px; /* Odstęp między sekcjami */
+}
+
+/* Media query dla mniejszych ekranów */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Układ elementów w pionie na małych ekranach */
+  }
+
+  .hobby-section img {
+    max-width: 200px; /* Mniejsza wysokość obrazków na małych ekranach */
+  }
+}
+
+/* Style formularza kontaktowego */
+.form_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px; /* Maksymalna szerokość formularza */
+  padding: 40px;
+  box-shadow: var(--df-box-shadow); /* Dodanie cienia */
+  background: #2a2a2a;
+  border-radius: var(--df-radius);
+}
+
+.form_container h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: start;
+}
+
+.form_container label {
+  display: block; /* Etykiety nad polami */
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form_container input,
+.form_container textarea {
+  width: 100%; /* Pełna szerokość pól */
+  padding: 10px;
+  margin-bottom: 16px;
+  border: var(--df-border);
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+.form_container textarea {
+  min-height: 120px; /* Minimalna wysokość pola tekstowego */
+  resize: vertical; /* Zezwól na zmianę rozmiaru tylko w pionie */
+}
+
+.form_container button[type="submit"] {
+  background-color: var(--second-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--df-radius);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form_container button[type="submit"]:hover {
+  background-color: #c5373a;
+}
+
+/* Style dla sekcji celów */
+.goals-section {
+  margin-bottom: 40px;
+  background-color: var(--main-color); /* Tło jak reszta strony */
+  padding: var(--df-padding);
+  border-radius: var(--df-radius);
+  box-shadow: var(--df-box-shadow);
+}
+
+.goals-section h2 {
+  margin-bottom: 24px; /* Większy odstęp pod nagłówkiem */
+  font-size: 28px; /* Większa czcionka nagłówka */
+  text-align: center;
+}
+
+.goals-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.goals-list li {
+  background-color: #333;
+  padding: var(--df-padding);
+  border-radius: var(--df-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Płynne przejścia */
+  position: relative;
+}
+
+.goals-list li:hover {
+  transform: translateY(-3px); /* Subtelny efekt uniesienia */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Większy cień przy najechaniu */
+}
+
+.goal {
+  width: 60%;
+}
+
+.goal-date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin-left: auto; /* Przesuń datę na prawą stronę */
+  font-size: 14px;
+  color: #999;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 20px;
+  }
+  .CTA {
+    width: calc(50vw + 50px);
+    text-align: center;
+  }
+  .hobby-section,
+  .hobby-section:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .hobby-section img {
+    max-width: 100%;
+  }
+}
